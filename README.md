@@ -8,7 +8,6 @@ You need Python, and the following bits:
   - [qrcode (from pip)](https://pypi.org/project/qrcode/)
 - To decode:
   - [pyzbar (from pip)](https://pypi.org/project/pyzbar/)
-  - [pillow (from pip)](https://pypi.org/project/Pillow/)
   - [zbar](http://zbar.sourceforge.net/)
 
 Depending on which functionality you need (just encode or decode), you can skip the dependencies that you don't need.

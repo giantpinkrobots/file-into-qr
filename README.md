@@ -34,6 +34,6 @@ You can add the additional arguments, too:
 - "--date" or "-t" will encode the modify date in one extra QR code.
 - "--silent" or "-s" will enable silent mode, so the program will not print any statements besides errors.
 
-At the end of an encode, you will have a folder filled with QR codes with the names "qrX.jpg", where X is the number of the file. Each QR code hold 2214 bytes of information stored in base64. At the end of a decode, you will have the file with the given name generated from the QR codes.
+At the end of an encode, you will have a folder filled with QR codes with the names "qrX.png", where X is the number of the file. Each QR code hold 2214 bytes of information stored in base64. At the end of a decode, you will have the file with the given name generated from the QR codes.
 
 The QR codes inside the folder must keep their names in the same way, since when decoding, the program reads the codes starting from "qr0.jpg" one by one until it reaches the end. At least for now. I'd like to change this behavior and make it better in the future, but I don't know if or when.

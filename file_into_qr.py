@@ -93,7 +93,7 @@ if encodeordecode == ('e'):
             qr.add_data(encoded) # Add the base64 string into the QR code
             qr.make(fit=True) # Make QR code
             img = qr.make_image(fill_color="black", back_color="white") # Make QR code image with black&white color scheme
-            with open(qrcodes_dir+"/qr"+str(qrcode_count)+".jpg", 'wb') as qrimage: # QR image name will be qr(number).jpg
+            with open(qrcodes_dir+"/qr"+str(qrcode_count)+".png", 'wb') as qrimage: # QR image name will be qr(number).png
                 img.save(qrimage) # Save QR code image
             if not (arguments.silent):
                 print (str((qrcode_count+1))+" / "+str(qrcode_totalcount+includemodifydate), end='\r') # Print progress
@@ -107,7 +107,7 @@ if encodeordecode == ('e'):
         qr.add_data(encoded) # Add the base64 string into the QR code
         qr.make(fit=True) # Make QR code
         img = qr.make_image(fill_color="black", back_color="white") # Make QR code image with black&white color scheme
-        with open(qrcodes_dir+"/qr"+str(qrcode_count)+".jpg", 'wb') as qrimage: # QR image name will be qr(number).jpg
+        with open(qrcodes_dir+"/qr"+str(qrcode_count)+".png", 'wb') as qrimage: # QR image name will be qr(number).png
             img.save(qrimage) # Save QR code image
         if not (arguments.silent):
             print (str((qrcode_count+2))+" / "+str(qrcode_totalcount+includemodifydate), end='\r') # Print progress
@@ -136,7 +136,7 @@ elif encodeordecode == ('d'):
     from os import utime
     while (qrcode_count <= int(qrcode_totalcount)): # Start loop
         with open(main_file, 'ab') as thefile: # Open the file that'll be written into
-            decoded_data = decode(Image.open(qrcodes_dir+"/qr"+str(qrcode_count)+".jpg")) # Write base64 read from QR code into the variable "decoded_data"
+            decoded_data = decode(Image.open(qrcodes_dir+"/qr"+str(qrcode_count)+".png")) # Write base64 read from QR code into the variable "decoded_data"
             if decoded_data: # If the data was successfully decoded
                 decoded = b64decode(decoded_data[0].data.decode()) # Decode the base64 string
 
